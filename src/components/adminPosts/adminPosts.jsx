@@ -6,7 +6,7 @@ import { deletePost } from "@/lib/action";
 const AdminPosts = async () => {
   const posts = await getPosts();
 
-  return (
+  return ( 
     <div className={styles.container}>
       <h1>Posts</h1>
       {posts.map((post) => (
@@ -23,6 +23,7 @@ const AdminPosts = async () => {
           <form action={deletePost}>
             <input type="hidden" name="id" value={post.id} />
             <button className={styles.postButton}>Delete</button>
+            <div></div>
           </form>
         </div>
       ))}
